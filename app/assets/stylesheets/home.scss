@@ -2,21 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#calendar
-{
-    width: 70%;
-    height: 65%;
-    margin: auto;
-    background-color: white;
+#calendar {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  background-color: white;
 }
-.fc-toolbar.fc-header-toolbar.fc-header-toolbar
-{
+
+.fc-toolbar.fc-header-toolbar.fc-header-toolbar {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.fc-unthemed td.fc-today.fc-today
-{
+
+.fc-unthemed td.fc-today.fc-today {
   color: red;
 }
-#homeindex{ background-image: url(background.jpg)
+
+#homeindex {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: url(background.jpg)
 }
