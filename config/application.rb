@@ -11,7 +11,6 @@ module MyApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
     config.active_job.queue_adapter = :sidekiq
-    config.cache_store = :redis_store, "<%= ENV['REDIS'] %>/cache", { expires_in: 90.minutes }
     config.time_zone = 'Asia/Ho_Chi_Minh'
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
     I18n.available_locales = [:en]
