@@ -19,5 +19,5 @@ test:
 production:
   <<: *default
   database: <%= ENV['NAME_DATABASE'] %>
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['JAWSDB_URL'] %>
   
