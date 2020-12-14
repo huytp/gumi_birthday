@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
   def index
+    @tab = params[:tab]
     @users = User.all.page(params[:user_page])
     @messages = Message.all.page(params[:message_page])
 
@@ -60,8 +61,17 @@ class AdminController < ApplicationController
   def destroy
     @user = User.find_by(id: params[:id])
     @user.destroy
+    @message = Message.where(user_id: params[:id])
+    message.destroy_all
     redirect_to "/admin"
   end
+
+
+  def destroy_messages
+    @message = Message.find_by(id: params[:id])
+    @message.destroy
+    redirect_to "/admin?tab=user-investments"
+  end 
 
   private
   

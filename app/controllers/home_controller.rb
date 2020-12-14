@@ -18,16 +18,19 @@ class HomeController < ApplicationController
     message.user_id = params[:message][:user_id]
     message.content = params[:message][:content]
     message.sendername = params[:message][:sendername]
+    message.createdate = params[:message][:createdate]
     user = User.find_by(id: params[:message][:user_id])
     name = user.name + " (" + user.nickname + ")"
 
     if message.save
-        flash[:success] = "Thank you for sending your best wishes to #{name}"
+      flash[:success] = "Thank you for sending your best wishes to #{name}"
+      SendJob.perform_later(user,message)
     else
-        flash[:error] = "Sent wishes fail"
+      flash[:error] = "Sent wishes fail"
     end
     redirect_to root_url
   end
+
 
   private 
 
@@ -35,7 +38,7 @@ class HomeController < ApplicationController
     daymonth = birthday.to_s.slice(4...birthday.to_s.size)
     birthday = Date.parse(Time.zone.now.year.to_s + daymonth)
 
-    if (birthday < Date.current)
+    if (birthday < Time.zone.now.to_date)
       (Time.now.year + 1).to_s + daymonth
     else
       Time.now.year.to_s + daymonth

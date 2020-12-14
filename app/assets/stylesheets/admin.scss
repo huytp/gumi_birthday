@@ -1,7 +1,145 @@
 // Place all the styles related to the admin controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+// You can use Sass (SCSS) here: https://sass-lang.com/.col-1 {width: 8.33%;}
+@media (min-device-width: 320px) and (max-device-width: 330){
+  .fc-scroller.fc-day-grid-container { 
+    overflow: unset !important; 
+    height: 100% !important; 
+  }
 
+  .fc-view-container.fc-view-container {
+    height: 1300px;
+  } 
+
+  #calendar#calendar {
+    width:90%;
+  }
+  .fc-row.fc-week.fc-widget-content {
+    height: 195px;
+  }
+
+  #homeindex#homeindex {
+    margin-top: 150px;
+    width: 95%;
+  }
+  #myModal#myModal
+  {
+    margin-top: 50px;
+  }
+} 
+@media (min-device-width: 768px) and (max-device-width: 1024px){
+  .fc-scroller.fc-day-grid-container { 
+    overflow: unset !important; 
+    height: 100% !important; 
+  }
+
+  .fc-view-container.fc-view-container {
+    height: 1200px;
+  } 
+
+  #calendar#calendar {
+    width:90%;
+
+  }
+
+  .fc-row.fc-week.fc-widget-content {
+    height: 180px;
+  }
+
+  #homeindex#homeindex {
+    margin-top: 40px;
+    width: 95%;
+  }
+} 
+@media (min-device-width: 360px) and (max-device-width: 375px) {
+  .fc-scroller.fc-day-grid-container { 
+    overflow: unset !important; 
+    height: 100% !important; 
+  }
+
+  .fc-view-container.fc-view-container {
+    height: 1400px;
+  } 
+
+  #calendar#calendar {
+    width:90%;
+
+  }
+
+  .fc-row.fc-week.fc-widget-content {
+    height: 195px;
+  }
+
+  #homeindex#homeindex {
+    margin-top: 150px;
+    width: 95%;
+  }
+} 
+@media (min-device-width: 400px) and (max-device-width: 420px) {
+  .fc-scroller.fc-day-grid-container { 
+    overflow: unset !important; 
+    height: 100% !important; 
+  }
+
+  .fc-view-container.fc-view-container {
+    height: 1320px;
+  } 
+
+  #calendar#calendar {
+    width:90%;
+
+  }
+
+  .fc-row.fc-week.fc-widget-content {
+    height: 190px;
+  }
+
+  #homeindex#homeindex {
+    margin-top: 200px;
+    width: 95%;
+  }
+} 
+@media (min-device-width: 360px) and (max-device-width: 375px) and (min-device-height: 800px){
+  .fc-scroller.fc-day-grid-container { 
+    overflow: unset !important; 
+    height: 100% !important; 
+  }
+
+  .fc-view-container.fc-view-container {
+    height: 1400px;
+  } 
+
+  #calendar#calendar {
+    width:90%;
+
+  }
+
+  .fc-row.fc-week.fc-widget-content {
+    height: 195px;
+  }
+
+  #homeindex#homeindex {
+    margin-top: 350px;
+    width: 95%;
+  }
+} 
+// @media 
+// only screen and (max-width: 320px),
+// (min-device-width: 768px) and (max-device-width: 1024px)
+// {
+//   .fc-scroller.fc-day-grid-container { overflow: unset !important; height: 100% !important; }
+//   .fc-view-container.fc-view-container{
+//     height: 1200px;
+//   } 
+//   .fc-row.fc-week.fc-widget-content
+//   {
+//     height: 180px;
+//   }
+//   #homeindex
+//   {
+//     margin-top: 35px;
+//   }
+// }
 .table.table-striped.table-bordered {
 
   th {
