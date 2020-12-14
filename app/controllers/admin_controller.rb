@@ -62,7 +62,7 @@ class AdminController < ApplicationController
     @user = User.find_by(id: params[:id])
     @user.destroy
     @message = Message.where(user_id: params[:id])
-    message.destroy_all
+    @message.destroy_all
     redirect_to "/admin"
   end
 
