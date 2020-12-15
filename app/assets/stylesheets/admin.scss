@@ -3,54 +3,56 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/.col-1 {width: 8.33%;}
 @media (min-device-width: 280px) and (max-device-width: 330px) {
 
-  .fc-scroller.fc-day-grid-container { 
-    overflow: unset !important; 
-    height: 100% !important; 
-  }
-
-  .fc-view-container.fc-view-container {
-    height: 1300px;
-  } 
-
-  #calendar#calendar {
-    width:90%;
-  }
-
-  .fc-row.fc-week.fc-widget-content {
-    height: 195px;
-  }
-
   #homeindex#homeindex {
+
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1300px;
+    } 
+  
+    #calendar#calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 195px;
+    }
+
+    #myModal#myModal
+    {
+      margin-top: 50px;
+    }
+
     margin-top: 150px;
     width: 95%;
-  }
-
-  #myModal#myModal
-  {
-    margin-top: 50px;
   }
 } 
 
 @media (min-device-width: 768px) and (max-device-width: 1024px) {
 
-  .fc-scroller.fc-day-grid-container { 
-    overflow: unset !important; 
-    height: 100% !important; 
-  }
-
-  .fc-view-container.fc-view-container {
-    height: 1200px;
-  } 
-
-  #calendar#calendar {
-    width:90%;
-  }
-
-  .fc-row.fc-week.fc-widget-content {
-    height: 180px;
-  }
-
   #homeindex#homeindex {
+
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1200px;
+    } 
+  
+    #calendar#calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 180px;
+    }
+
     margin-top: 40px;
     width: 95%;
   }
@@ -58,24 +60,25 @@
 
 @media (min-device-width: 360px) and (max-device-width: 375px) {
 
-  .fc-scroller.fc-day-grid-container { 
-    overflow: unset !important; 
-    height: 100% !important; 
-  }
-
-  .fc-view-container.fc-view-container {
-    height: 1400px;
-  } 
-
-  #calendar#calendar {
-    width:90%;
-  }
-
-  .fc-row.fc-week.fc-widget-content {
-    height: 195px;
-  }
-
   #homeindex#homeindex {
+    
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1400px;
+    } 
+  
+    #calendar#calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 195px;
+    }
+
     margin-top: 150px;
     width: 95%;
   }
@@ -83,24 +86,25 @@
 
 @media (min-device-width: 530px) and (max-device-width: 540px) {
 
-  .fc-scroller.fc-day-grid-container { 
-    overflow: unset !important; 
-    height: 100% !important; 
-  }
-
-  .fc-view-container.fc-view-container {
-    height: 1200px;
-  } 
-
-  #calendar#calendar {
-    width:90%;
-  }
-
-  .fc-row.fc-week.fc-widget-content {
-    height: 180px;
-  }
-
   #homeindex#homeindex {
+
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1200px;
+    } 
+  
+    #calendar#calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 180px;
+    }
+
     margin-top: 100px;
     width: 95%;
   }
@@ -108,24 +112,25 @@
 
 @media (min-device-width: 400px) and (max-device-width: 420px) {
 
-  .fc-scroller.fc-day-grid-container { 
-    overflow: unset !important; 
-    height: 100% !important; 
-  }
-
-  .fc-view-container.fc-view-container {
-    height: 1320px;
-  } 
-
-  #calendar#calendar {
-    width:90%;
-  }
-
-  .fc-row.fc-week.fc-widget-content {
-    height: 190px;
-  }
-
   #homeindex#homeindex {
+
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1320px;
+    } 
+  
+    #calendar#calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 190px;
+    }
+  
     margin-top: 200px;
     width: 95%;
   }
@@ -133,24 +138,25 @@
 
 @media (min-device-width: 360px) and (max-device-width: 375px) and (min-device-height: 800px) {
 
-  .fc-scroller.fc-day-grid-container { 
-    overflow: unset !important; 
-    height: 100% !important; 
-  }
-
-  .fc-view-container.fc-view-container {
-    height: 1400px;
-  } 
-
-  #calendar#calendar {
-    width:90%;
-  }
-
-  .fc-row.fc-week.fc-widget-content {
-    height: 195px;
-  }
-
   #homeindex#homeindex {
+    
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1400px;
+    } 
+  
+    #calendar#calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 195px;
+    }
+  
     margin-top: 350px;
     width: 95%;
   }
