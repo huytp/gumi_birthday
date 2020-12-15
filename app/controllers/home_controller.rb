@@ -24,7 +24,7 @@ class HomeController < ApplicationController
 
     if message.save
       flash[:success] = I18n.t('thankyou',name: name)
-      SendJob.perform_later(user,message)
+      SendJob.set(wait: 5.second).perform_later(user,message)
     else
       flash[:error] = I18n.t('sentfail')
     end

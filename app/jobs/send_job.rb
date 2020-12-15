@@ -2,7 +2,7 @@ require 'slack-ruby-client'
 
 class SendJob < ApplicationJob
 
-  queue_as :default 
+  queue_as :send_job
   
   def perform(user,message)
       if (Time.current.to_date == user.birthday) &&

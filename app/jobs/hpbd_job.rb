@@ -2,7 +2,7 @@ require 'slack-ruby-client'
 
 class HpbdJob < ApplicationJob
   
-  queue_as :default 
+  queue_as :default
 
   def perform
     client = Slack::Web::Client.new
