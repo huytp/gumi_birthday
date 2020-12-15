@@ -23,10 +23,10 @@ class HomeController < ApplicationController
     name = user.name + " (" + user.nickname + ")"
 
     if message.save
-      flash[:success] = "Thank you for sending your best wishes to #{name}"
+      flash[:success] = I18n.t('thankyou',name: name)
       SendJob.perform_later(user,message)
     else
-      flash[:error] = "Sent wishes fail"
+      flash[:error] = I18n.t('sentfail')
     end
     redirect_to root_url
   end
@@ -38,7 +38,7 @@ class HomeController < ApplicationController
     daymonth = birthday.to_s.slice(4...birthday.to_s.size)
     birthday = Date.parse(Time.zone.now.year.to_s + daymonth)
 
-    if (birthday < Time.zone.now.to_date)
+    if (birthday < Date.current)
       (Time.now.year + 1).to_s + daymonth
     else
       Time.now.year.to_s + daymonth

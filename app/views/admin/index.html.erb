@@ -1,8 +1,8 @@
 <div id = "admin_index">
   <% if admin_signed_in? %>
-    <%= link_to "Sign out", destroy_admin_session_path, :method => :delete,class: "btn btn-primary" %>
+    <%= link_to "Sign out", destroy_admin_session_path, :method => :delete, class: "btn btn-primary" %>
   <% else %>
-    <%= link_to "Login", "/admin/login",class: "btn btn-primary" %>
+    <%= link_to "Login", new_admin_session_path, class: "btn btn-primary" %>
   <% end %>
 
   <% flash.each do |type, msg| %>
@@ -28,7 +28,7 @@
                     <th scope="col">Nickname</th>
                     <th scope="col">Birthday</th>
                     <th scope="col">
-                      <%= link_to "/admin/create_user" do %>
+                      <%= link_to create_user_admin_index_path do %>
                         <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
                       <% end %> 
                     </th>
@@ -39,7 +39,7 @@
                 </tbody>
               </table>
                 <div id="paginator">
-                  <%= paginate @users, remote: true,theme: 'twitter-bootstrap-3', param_name: :user_page %>
+                  <%= paginate @users, remote: true, theme: 'twitter-bootstrap-3', param_name: :user_page %>
                 </div>
             </div>
             <div class="tab-pane" id="user-investments" role='tabpanel' >
@@ -57,7 +57,7 @@
                   </tbody>
                 </table>
               <div id="paginator1">
-                <%= paginate @messages, remote: true,theme: 'twitter-bootstrap-3', param_name: :message_page %>
+                <%= paginate @messages, remote: true, theme: 'twitter-bootstrap-3', param_name: :message_page %>
               </div>
             </div>
           </div>

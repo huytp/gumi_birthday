@@ -5,8 +5,8 @@ class SendJob < ApplicationJob
   queue_as :default 
   
   def perform(user,message)
-    if (Time.zone.now.to_date == user.birthday) &&
-      (Time.zone.now.strftime(HM_FORMAT) > ENV['STARTS'])
+      if (Time.current.to_date == user.birthday) &&
+      (Time.current.strftime(HM_FORMAT) > ENV['STARTS'])
         client = Slack::Web::Client.new
         users_client = client.users_list['members']
         user_client = users_client.detect{|user_client| user_client['profile']['display_name']&.downcase.index(user.nickname.downcase)}

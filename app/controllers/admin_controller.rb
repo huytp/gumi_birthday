@@ -59,18 +59,39 @@ class AdminController < ApplicationController
   end
 
   def destroy
-    @user = User.find_by(id: params[:id])
-    @user.destroy
-    @message = Message.where(user_id: params[:id])
-    @message.destroy_all
-    redirect_to "/admin"
+    
+    if params[:id]
+      @user = User.find_by(id: params[:id])
+
+      if @user.present?
+        @user.destroy
+      else
+        flash[:errors] = I18n.t('notid')
+        redirect_to "/admin"
+        return;
+      end
+
+      @message = @user.messages
+
+      if(@message.present?)
+        @message.destroy_all
+      end
+
+      redirect_to "/admin"
+    else
+      flash[:errors] = I18n.t('notid')
+      redirect_to "/admin"
+    end
+
   end
 
 
   def destroy_messages
+
     @message = Message.find_by(id: params[:id])
     @message.destroy
     redirect_to "/admin?tab=user-investments"
+
   end 
 
   private
