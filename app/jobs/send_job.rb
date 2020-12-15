@@ -6,14 +6,15 @@ class SendJob < ApplicationJob
   
   def perform(user,message)
     if (Time.zone.now.to_date == user.birthday) &&
-      (Time.zone.now.strftime('%H:%M') > "09:00")
+      (Time.zone.now.strftime(HM_FORMAT) > ENV['STARTS'])
         client = Slack::Web::Client.new
         users_client = client.users_list['members']
         user_client = users_client.detect{|user_client| user_client['profile']['display_name']&.downcase.index(user.nickname.downcase)}
+        string =
         if user_client.present?
-          string = 'Hi ' + '<@' + user_client['id'] + '|cal> ' + "\n  " + I18n.t('wishesnew') + '*From ' + message.sendername + ':*' + "\n" + message.content + "\n"
+          'Hi ' + '<@' + user_client['id'] + '|cal> ' + "\n  " + I18n.t('wishesnew') + '*From ' + message.sendername + ':*' + "\n" + message.content + "\n"
         else
-          string = 'Hi ' + user.name + "\n" + I18n.t('wishesnew') + "*From #{message.sendername}:*\n" + "#{message.content}\n"
+          'Hi ' + user.name + "\n" + I18n.t('wishesnew') + "*From #{message.sendername}:*\n" + "#{message.content}\n"
         end 
         client.chat_postMessage(channel: ENV['SLACK_CHANNEL'],text: string, as_user: true)
       end
