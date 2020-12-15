@@ -91,7 +91,7 @@ class AdminController < ApplicationController
     @message = Message.find_by(id: params[:id])
     @message.destroy
     redirect_to "/admin?tab=user-investments"
-
+    
   end 
 
   private
