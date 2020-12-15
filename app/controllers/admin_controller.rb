@@ -20,6 +20,7 @@ class AdminController < ApplicationController
 
   def post_user
     user = User.find_by(nickname: params[:user][:nickname])
+    
     if user.present?
       @user = User.new
       flash.now[:errors] = "Nickname is exists"
@@ -36,7 +37,6 @@ class AdminController < ApplicationController
       @user = User.new()
       render :create_user
     end
-
   end
 
   def update
@@ -59,7 +59,6 @@ class AdminController < ApplicationController
   end
 
   def destroy
-    
     if params[:id]
       @user = User.find_by(id: params[:id])
 
@@ -82,16 +81,13 @@ class AdminController < ApplicationController
       flash[:errors] = I18n.t('notid')
       redirect_to "/admin"
     end
-
   end
 
 
   def destroy_messages
-
     @message = Message.find_by(id: params[:id])
     @message.destroy
     redirect_to "/admin?tab=user-investments"
-    
   end 
 
   private
