@@ -30,6 +30,14 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  home:
+    index:
+      link_export: Export Users
+      title: Export CSV
+  header_csv:
+    name: 'Họ và Tên'
+    nickname: 'Biệt Danh'
+    birthday: 'Ngày Sinh'
   noone: "Today,noone have birthday,wishes everybody have nice working day... 1,2,3"
   wish:  "Happy birthday %{name}.\nWishing you a beautiful day with good health and happiness forever."
   statement: "These are the meaningful wishes sent to you:"

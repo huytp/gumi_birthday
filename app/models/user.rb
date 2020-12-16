@@ -3,4 +3,5 @@ class User < ApplicationRecord
     validates :name, presence: true
     validates :nickname, presence: true, uniqueness: true
     validates :birthday, presence: true  
+    CSV_ATTRIBUTES = %w(name nickname birthday).freeze
 end
