@@ -170,15 +170,11 @@
 } 
 
 .table.table-striped.table-bordered {
-
-  th {
-  }
-
   th, tbody td {
     text-align: center !important;
   }
 }
-body{
+body {
   background: url(background1.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -218,6 +214,6 @@ body{
   }
 }
 
-.tooltip-inner.tooltip-inner{
+.tooltip-inner.tooltip-inner {
   background-color:#337ab7;
 }
