@@ -5,7 +5,7 @@ class SendJob < ApplicationJob
   queue_as :send_job
   
   def perform(user,message)
-      if (Time.current.to_date == user.birthday) &&
+      if (Time.current.to_date == Job::HandleJob.birthdaythisyear(user.birthday)) &&
       (Time.current.strftime(HM_FORMAT) > ENV['STARTS'])
         client = Slack::Web::Client.new
         users_client = client.users_list['members']

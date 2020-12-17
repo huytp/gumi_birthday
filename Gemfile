@@ -22,10 +22,6 @@ gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 #gem 'webpacker', '~> 4.0'
-gem 'csv'
-gem 'daemons'
-gem 'delayed_job_active_record'
-gem 'delayed_job'
 gem 'activerecord-import'
 gem "roo", "~> 2.8.0"
 gem 'sprockets-rails', require: 'sprockets/railtie'

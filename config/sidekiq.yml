@@ -1,4 +1,3 @@
-
 :queues:
   - send_job
   - hpbd_job
