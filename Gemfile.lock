@@ -329,10 +329,6 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capybara (>= 2.15)
-  csv
-  daemons
-  delayed_job
-  delayed_job_active_record
   devise (~> 4.1)
   figaro
   font-awesome-rails
