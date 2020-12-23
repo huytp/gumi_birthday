@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(version: 2020_12_14_015454) do
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
     t.integer "user_id"
-    t.string "sendername"
+    t.string "sender_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.date "createdate"
+    t.date "create_date"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
