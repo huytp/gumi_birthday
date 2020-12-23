@@ -74,7 +74,7 @@ class HpbdJob < ApplicationJob
       string = string + I18n.t('statement') + "\n"
       
       messages.each do |message|
-        string = string + '*From ' + message.sendername + ':*' + "\n"
+        string = string + '*From ' + message.sender_name + ':*' + "\n"
         string = string  + message.content + "\n"
       end 
     end

@@ -17,8 +17,8 @@ class HomeController < ApplicationController
     message = Message.new
     message.user_id = params[:message][:user_id]
     message.content = params[:message][:content]
-    message.sendername = params[:message][:sendername]
-    message.createdate = params[:message][:createdate]
+    message.sender_name = params[:message][:sender_name]
+    message.create_date = params[:message][:create_date]
     user = User.find_by(id: params[:message][:user_id])
     name = user.name + " (" + user.nickname + ")"
 

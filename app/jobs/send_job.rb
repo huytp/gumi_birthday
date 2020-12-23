@@ -12,9 +12,9 @@ class SendJob < ApplicationJob
         user_client = users_client.detect{|user_client| user_client['profile']['display_name']&.downcase.index(user.nickname.downcase)}
         string =
         if user_client.present?
-          'Hi ' + '<@' + user_client['id'] + '|cal> ' + "\n  " + I18n.t('wishesnew') + '*From ' + message.sendername + ':*' + "\n" + message.content + "\n"
+          'Hi ' + '<@' + user_client['id'] + '|cal> ' + "\n  " + I18n.t('wishesnew') + '*From ' + message.sender_name + ':*' + "\n" + message.content + "\n"
         else
-          'Hi ' + user.name + "\n" + I18n.t('wishesnew') + "*From #{message.sendername}:*\n" + "#{message.content}\n"
+          'Hi ' + user.name + "\n" + I18n.t('wishesnew') + "*From #{message.sender_name}:*\n" + "#{message.content}\n"
         end 
         client.chat_postMessage(channel: ENV['SLACK_CHANNEL'],text: string, as_user: true)
       end
