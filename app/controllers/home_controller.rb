@@ -18,16 +18,19 @@ class HomeController < ApplicationController
     message.user_id = params[:message][:user_id]
     message.content = params[:message][:content]
     message.sendername = params[:message][:sendername]
+    message.createdate = params[:message][:createdate]
     user = User.find_by(id: params[:message][:user_id])
     name = user.name + " (" + user.nickname + ")"
 
     if message.save
-        flash[:success] = "Thank you for sending your best wishes to #{name}"
+      flash[:success] = I18n.t('thankyou',name: name)
+      SendJob.set(wait: 5.second).perform_later(user,message)
     else
-        flash[:error] = "Sent wishes fail"
+      flash[:error] = I18n.t('sentfail')
     end
     redirect_to root_url
   end
+
 
   private 
 

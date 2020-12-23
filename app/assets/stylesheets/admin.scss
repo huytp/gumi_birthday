@@ -1,17 +1,180 @@
 // Place all the styles related to the admin controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+// You can use Sass (SCSS) here: https://sass-lang.com/.col-1 {width: 8.33%;}
+@media (min-device-width: 280px) and (max-device-width: 310px) {
+  #home_index {
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1300px;
+    } 
+  
+    #calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 195px;
+    }
+
+    margin-top: 400px !important;
+    width: 95%;
+  }
+} 
+
+@media (min-device-width: 320px) and (max-device-width: 330px){
+  #home_index {
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1300px;
+    } 
+  
+    #calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 195px;
+    }
+
+    margin-top: 150px !important;
+    width: 95%;
+  }
+} 
+
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  #home_index {
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1200px;
+    } 
+  
+    #calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 180px;
+    }
+
+    margin-top: 40px !important;
+    width: 95%;
+  }
+} 
+
+@media (min-device-width: 360px) and (max-device-width: 375px) {
+  #home_index {
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1400px;
+    } 
+  
+    #calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 195px;
+    }
+
+    margin-top: 150px !important;
+    width: 95%;
+  }
+} 
+
+@media (min-device-width: 530px) and (max-device-width: 540px) {
+  #home_index {
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1200px;
+    } 
+  
+    #calendar#calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 180px;
+    }
+
+    margin-top: 100px !important;
+    width: 95%;
+  }
+} 
+
+@media (min-device-width: 400px) and (max-device-width: 420px) {
+    #home_index {
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1320px;
+    } 
+  
+    #calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 190px;
+    }
+  
+    margin-top: 200px !important;
+    width: 95%;
+  }
+} 
+
+@media (min-device-width: 360px) and (max-device-width: 375px) and (min-device-height: 800px) {
+  #home_index {
+    .fc-scroller.fc-day-grid-container { 
+      overflow: unset !important; 
+      height: 100% !important; 
+    }
+  
+    .fc-view-container.fc-view-container {
+      height: 1400px;
+    } 
+  
+    #calendar {
+      width:90%;
+    }
+  
+    .fc-row.fc-week.fc-widget-content {
+      height: 195px;
+    }
+  
+    margin-top: 350px !important;
+    width: 95%;
+  }
+} 
 
 .table.table-striped.table-bordered {
-
-  th {
-  }
-
   th, tbody td {
     text-align: center !important;
   }
 }
-body{
+body {
   background: url(background1.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -33,6 +196,7 @@ body{
   margin-top: 10px;
   margin-left: 450px;
 }
+
 #admin_index
 {
   .btn.btn
@@ -40,6 +204,7 @@ body{
     margin-left: 94%;
   }
 }
+
 #admin_login
 {
   .alert.alert
@@ -48,6 +213,7 @@ body{
     margin-top: 10px;
   }
 }
-.tooltip-inner.tooltip-inner{
+
+.tooltip-inner.tooltip-inner {
   background-color:#337ab7;
 }

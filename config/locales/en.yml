@@ -36,3 +36,7 @@ en:
   upcoming: "The birthday of %{tagnames} are coming soon.\n"
   link:  "Let's access the link %{link} to send your wish to them." 
   mutipledash: "-----------------------------------------------------------------------------------------------------------------------------\n"
+  wishesnew: "You have a new meaningful wishes sent to you:\n"
+  thankyou: "Thank you for sending your best wishes to %{name}"
+  notid: "don't have id"
+  sentfail: "Sent wishes fail"
